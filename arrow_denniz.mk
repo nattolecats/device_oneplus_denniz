@@ -32,7 +32,7 @@ TARGET_SUPPORTS_CALL_RECORDING := true
 FORCE_AOSP_DIALER := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_denniz
+PRODUCT_NAME := arrow_denniz
 PRODUCT_DEVICE := denniz
 PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := DN2103
