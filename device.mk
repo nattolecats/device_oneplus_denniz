@@ -165,6 +165,10 @@ PRODUCT_PACKAGES += \
     RcsService \
     PresencePolling
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePkgs
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
