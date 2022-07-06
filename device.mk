@@ -161,7 +161,8 @@ PRODUCT_COPY_FILES += \
 
 # Recovery
 PRODUCT_PACKAGES += \
-    init.recovery.mt6893.rc
+    init.recovery.mt6893.rc \
+    init.recovery.mt6893.sh
 
 # RcsService
 PRODUCT_PACKAGES += \
