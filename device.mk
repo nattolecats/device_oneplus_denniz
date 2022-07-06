@@ -159,6 +159,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
 
+# Recovery
+PRODUCT_PACKAGES += \
+    init.recovery.mt6893.rc
+
 # RcsService
 PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
