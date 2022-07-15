@@ -25,6 +25,9 @@ PRODUCT_SYSTEM_PROPERTIES += \
     vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera \
     vendor.camera.aux.packageblacklist=org.telegram.messenger,com.microsoft.teams,com.discord
 
+PRODUCT_SYSTEM_PROPERTIES += \
+oplus.camera.packname=com.oplus.camera
+
 # Dexopt
 PRODUCT_SYSTEM_PROPERTIES += \
     pm.dexopt.first-boot=quicken \
