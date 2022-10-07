@@ -61,6 +61,11 @@ PRODUCT_SYSTEM_PROPERTIES  += \
     persist.nfc.smartcard.recorder.enable=true \
     persist.sys.nfc.default=on
 
+# Official Project-Elixir Stuff
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.elixir.maintainer=SakilMondal \
+    org.elixir.device=OnePlus-Nord2-5G
+
 # OMX
 PRODUCT_SYSTEM_PROPERTIES += \
     debug.stagefright.omx_default_rank.sw-audio=1 \
