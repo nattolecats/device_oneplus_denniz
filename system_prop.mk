@@ -64,7 +64,7 @@ PRODUCT_SYSTEM_PROPERTIES  += \
 # Official Project-Elixir Stuff
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.elixir.maintainer=SakilMondal \
-    org.elixir.device=OnePlus-Nord2-5G
+    org.elixir.device=OnePlus Nord2 5G
 
 # OMX
 PRODUCT_SYSTEM_PROPERTIES += \
