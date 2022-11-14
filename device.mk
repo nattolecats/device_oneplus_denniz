@@ -139,7 +139,7 @@ PRODUCT_COPY_FILES += \
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.denniz \
-    android.hardware.sensors@2.0-service.multihal
+    android.hardware.sensors@2.0-service-multihal.denniz
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
