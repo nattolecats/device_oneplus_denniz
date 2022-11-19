@@ -9,6 +9,7 @@ on fs
     write /sys/class/oplus_chg/usb/otg_switch 1
 
 on init
+    start init-recovery-mt6893-sh
     setprop sys.usb.configfs 1
     setprop sys.usb.ffs.aio_compat 1
     setprop vendor.usb.controller "musb-hdrc"
