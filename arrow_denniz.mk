@@ -21,26 +21,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile
 $(call inherit-product, device/oneplus/denniz/device.mk)
 
-# Inherit some common Project-Elixir stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common ArrowOS stuff.
+$(call inherit-product, vendor/arrow/config/common.mk)
 
-# Project-Elixir Stuff
-ELIXIR_MAINTAINER := SakilMondal
-ELIXIR_BUILD_TYPE := OFFICIAL
+# ArrowOS Stuff
 IS_PHONE := true
-CUSTOM_BUILD_TYPE := OFFICIAL
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_SUPPORTS_CALL_RECORDING := true
-FORCE_LAWNCHAIR := true
-EXTRA_UDFPS_ANIMATIONS := true
 FORCE_AOSP_DIALER := true
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := aosp_denniz
 PRODUCT_DEVICE := denniz
 PRODUCT_BRAND := OnePlus
-PRODUCT_MODEL := DN2101
+PRODUCT_MODEL := DN2103
 PRODUCT_MANUFACTURER := OnePlus
 
 # Gapps
@@ -53,7 +48,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 # Build info
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE=OP515BL1 \
-    PRODUCT_NAME=DN2101IND \
+    PRODUCT_NAME=DN2103 \
     PRIVATE_BUILD_DESC="DN201IND-user 11 RP1A.200720.011 1627567766349 release-keys"
 
-BUILD_FINGERPRINT := OnePlus/DN2101IND/OP515BL1:11/RP1A.200720.011/1627567766349:user/release-keys
+BUILD_FINGERPRINT := OnePlus/DN2103/OP515BL1:11/RP1A.200720.011/1627567766349:user/release-keys

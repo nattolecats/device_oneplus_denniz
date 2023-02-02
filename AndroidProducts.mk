@@ -15,4 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_denniz.mk
+    $(LOCAL_DIR)/arrow_denniz.mk
+
+COMMON_LUNCH_CHOICES := \
+    arrow_denniz-eng \
+    arrow_denniz-userdebug \
+    arrow_denniz-user
