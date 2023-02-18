@@ -1,0 +1,48 @@
+# Call steps 
+ro.config.vc_call_vol_steps=7
+
+# Camera
+oplus.camera.packname=com.oplus.camera
+vendor.camera.aux.packagelist=com.android.camera,com.google.camera,com.ss.android.ugc.aweme
+vendor.camera.aux.packageblacklist=org.telegram.messenger,com.microsoft.teams,com.discord
+
+# Dex
+dalvik.vm.dex2oat64.enabled=true
+persist.bg.dexopt.enable=true
+dalvik.vm.dexopt.secondary=true
+pm.dexopt.install=speed-profile
+pm.dexopt.bg-dexopt=speed-profile
+pm.dexopt.boot=verify
+pm.dexopt.first-boot=quicken
+dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5
+dalvik.vm.dex2oat-threads=6
+
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.vendor.vilte_support=0
+persist.vendor.mtk.vilte.enable=0
+persist.dbg.wfc_avail_ovr=1
+
+# MTK perf
+ro.mtk_perf_simple_start_win=1 
+ro.mtk_perf_fast_start_win=1 
+ro.mtk_perf_response_time=1
+
+# NFC
+persist.sys.nfc.disPowerSave=1 
+persist.nfc.smartcard.recorder.enable=true 
+persist.sys.nfc.default=on
+
+# Stagefright
+debug.stagefright.omx_default_rank.sw-audio=1 
+debug.stagefright.omx_default_rank=0 
+debug.stagefright.ccodec=0
+
+# WFD
+ro.vendor.wfd.dummy.enable=0
+
+# ZRAM
+ro.zram.mark_idle_delay_mins=60 
+ro.zram.first_wb_delay_mins=1440 
+ro.zram.periodic_wb_delay_hours=24
