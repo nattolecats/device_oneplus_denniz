@@ -1,1 +1,5 @@
 get_prop(priv_app, vendor_default_prop)
+get_prop(surfaceflinger, vendor_default_prop)
+set_prop(hal_fingerprint_oplus, vendor_default_prop)
+get_prop(hal_audio_sysbta, vendor_default_prop)
+get_prop(radio, vendor_default_prop)

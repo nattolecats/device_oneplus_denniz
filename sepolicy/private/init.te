@@ -29,3 +29,6 @@ allow init sysfs_vibrator:file { read open write getattr setattr };
 
 # Allow init to write to sysfs_fod node
 allow init sysfs_fod:file { read open write getattr setattr };
+allow init sysfs_devices_block:file { write };
+allow init sysfs_devices_block:file { open };
+allow init proc_tp:file { setattr };

@@ -3,3 +3,4 @@ type hal_fingerprint_oplus_exec, system_file_type, exec_type, file_type;
 
 allow hal_fingerprint_oplus proc_tp:dir search;
 allow hal_fingerprint_oplus proc_tp:file { open write };
+allow hal_fingerprint_oplus default_prop:file { map };
