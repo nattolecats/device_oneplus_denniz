@@ -34,9 +34,6 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 $(call inherit-product-if-exists, vendor/oneplus/denniz/denniz-vendor.mk)
 $(call inherit-product-if-exists, vendor/mediatek/ims/mtk-ims.mk)
 
-# OneplusParts
-$(call inherit-product, packages/apps/OneplusParts/parts.mk)
-
 # OPlusExtras
 PRODUCT_PACKAGES += OPlusExtras
 
@@ -124,8 +121,7 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     init.mt6893.rc \
-    init.oneplusparts.rc \
-    init.oneplusparts.sh
+    init.oplus_extras.rc
 
 # NFC
 PRODUCT_PACKAGES += \

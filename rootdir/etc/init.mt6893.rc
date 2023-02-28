@@ -1,4 +1,4 @@
-import /system/etc/init/hw/init.oneplusparts.rc
+import /system/etc/init/hw/init.oplus_extras.rc
 
 on init
     mount none /vendor/lost+found /vendor/overlay bind
