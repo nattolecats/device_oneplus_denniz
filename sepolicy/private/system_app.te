@@ -22,7 +22,7 @@ allow system_app sysfs_usb_supply:file { getattr open read write };
 allow system_app sysfs_fod:file { read open write getattr };
 allow system_app sysfs_graphics_ffl:file { read open write getattr };
 allow system_app sysfs_zram:file { open };
-allow system_app oplus_sysfs:file write;
+allow system_app oplus_sysfs:file { open read write };
 
 # Allow system_app to set vib strength
 set_prop(system_app, vib_strength)
