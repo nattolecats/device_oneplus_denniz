@@ -18,31 +18,25 @@
 -->
 <resources>
 
-    <!-- Enable UI touch sounds by default -->
-    <bool name="def_sound_effects_enabled">true</bool>
+    <!-- Disable UI touch sounds by default -->
+    <bool name="def_sound_effects_enabled">false</bool>
 
-    <!-- Enable bluetooth by default -->
-    <bool name="def_bluetooth_on">true</bool>
-    
-    <!-- Default screen brightness, from 0 to 255.  102 is 40%. -->
-    <integer name="def_screen_brightness">80</integer>
-    
+    <!-- Disable bluetooth by default -->
+    <bool name="def_bluetooth_on">false</bool>
+
     <!-- Set the automatic brightness mode on by default -->
-    <bool name="def_screen_brightness_automatic_mode">true</bool>
+    <bool name="def_screen_brightness_automatic_mode">false</bool>
 
     <!-- Set Window animation scale to 50% by default -->
-    <fraction name="def_window_animation_scale">50%</fraction>
+    <fraction name="def_window_animation_scale">70%</fraction>
 
     <!-- Set Window transition scale to 50% by default -->
-    <fraction name="def_window_transition_scale">50%</fraction>
+    <fraction name="def_window_transition_scale">70%</fraction>
 
     <!-- Default for Settings.Global.DEVICE_NAME $1=MANUFACTURER $2=MODEL-->
     <string name="def_device_name">OnePlus Nord2 5G</string>
 
     <!-- Default for Settings.Global.DEVICE_NAME $1=MODEL-->
     <string name="def_device_name_simple">OnePlus Nord2 5G</string>
-    
-    <!-- Default for Settings.Secure.VOLUME_PANEL_ON_LEFT -->
-    <bool name="def_volume_panel_on_left">true</bool>
 
 </resources>

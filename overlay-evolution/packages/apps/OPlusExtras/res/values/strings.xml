@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2022 The Evolution X Project
+                   2018-2021 crDroid Android Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <string name="refresh_extreme">90Hz</string>
+
+    <!-- Alert slider -->
+    <string name="notification_slider_for_notification">Notification</string>
+    <string name="notification_slider_for_flashlight">Flashlight</string>
+    <string name="notification_slider_for_brightness">Brightness</string>
+    <string name="notification_slider_for_rotation">Rotation</string>
+    <string name="notification_slider_for_ringer">Ringer</string>
+    <string name="notification_slider_for_notification_ringer">Notification and ringer</string>
+    <string name="notification_slider_for_extradim">Extra Dim</string>
+    <string name="notification_slider_for_nightlight">Night Light</string>
+    <string name="notification_slider_for_refresh">Refresh rate</string>
+
+</resources>

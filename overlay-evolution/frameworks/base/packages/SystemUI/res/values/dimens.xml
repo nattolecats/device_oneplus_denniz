@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2019 Paranoid Android
+                   2022 The Evolution X Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <!-- Alert Slider UI for OnePlus Nord 2 -->
+    <dimen name="tri_state_down_dialog_position">413.0px</dimen>
+    <dimen name="tri_state_down_dialog_position_l">410.0px</dimen>
+    <dimen name="tri_state_middle_dialog_position">286.0px</dimen>
+    <dimen name="tri_state_middle_dialog_position_l">410.0px</dimen>
+    <dimen name="tri_state_up_dialog_position">155.0px</dimen>
+    <dimen name="tri_state_up_dialog_position_l">410.0px</dimen>
+    <dimen name="tri_state_up_dialog_position_deep">21.0px</dimen>
+    <dimen name="tri_state_up_dialog_position_deep_land">21.0px</dimen>
+
+</resources>
