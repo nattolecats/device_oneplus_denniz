@@ -33,8 +33,12 @@ def IncrementalOTA_InstallEnd(info):
 
 def AddImage(info, basename, dest):
   path = "IMAGES/" + basename
+  path2 = "RADIO/" + basename
   if path not in info.input_zip.namelist():
-    return
+    if path2 not in info.input_zip.namelist():
+      return
+    else:
+      path = path2
 
   data = info.input_zip.read(path)
   common.ZipWriteStr(info.output_zip, basename, data)
@@ -46,4 +50,5 @@ def OTA_InstallEnd(info):
   info.script.Print("Patching vbmeta images...")
   AddImage(info, "vbmeta.img", "/dev/block/by-name/vbmeta")
   AddImage(info, "vbmeta_system.img", "/dev/block/by-name/vbmeta_system")
+  AddImage(info, "md1img.img", "/dev/block/by-name/md1img")
   return
