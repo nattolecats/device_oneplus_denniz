@@ -31,8 +31,8 @@ PRODUCT_EXTRA_VNDK_VERSIONS := 30
 PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Call proprietary blob setup
-$(call inherit-product-if-exists, vendor/oneplus/denniz/denniz-vendor.mk)
-$(call inherit-product-if-exists, vendor/mediatek/ims/mtk-ims.mk)
+$(call inherit-product, vendor/oneplus/denniz/denniz-vendor.mk)
+$(call inherit-product, vendor/mediatek/ims/mtk-ims.mk)
 $(call inherit-product-if-exists, packages/apps/prebuilt-apps/prebuilt-apps.mk)
 
 # OneplusParts
