@@ -13,6 +13,9 @@ ro.crypto.volume.options=::v2
 persist.log.tag.gralloc4=S
 ro.control_privapp_permissions=log
 
+# Netflix
+ro.netflix.bsp_rev=MTK6893-32816-1
+
 # SOC
 ro.soc.manufacturer=Mediatek 
 ro.soc.model=MT6893
