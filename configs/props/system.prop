@@ -39,6 +39,16 @@ debug.stagefright.omx_default_rank.sw-audio=1
 debug.stagefright.omx_default_rank=0 
 debug.stagefright.ccodec=0
 
+# SurfaceFlinger
+debug.sf.use_phase_offsets_as_durations=1
+debug.sf.late.sf.duration=27600000
+debug.sf.late.app.duration=20000000
+debug.sf.early.sf.duration=27600000
+debug.sf.early.app.duration=20000000
+debug.sf.earlyGl.sf.duration=27600000
+debug.sf.earlyGl.app.duration=20000000
+debug.sf.hwc.min.duration=17000000
+
 # WFD
 ro.vendor.wfd.dummy.enable=0
 
