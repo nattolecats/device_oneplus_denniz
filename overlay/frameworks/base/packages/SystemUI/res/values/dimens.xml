@@ -30,5 +30,15 @@
     <dimen name="keyguard_indication_margin_bottom">140dp</dimen>
 
     <dimen name="status_bar_header_height_keyguard">@*android:dimen/status_bar_height_portrait</dimen>
+    
+    <!-- Alert Slider UI for OnePlus Nord 2 -->
+    <dimen name="tri_state_down_dialog_position">423.0px</dimen>
+    <dimen name="tri_state_down_dialog_position_l">410.0px</dimen>
+    <dimen name="tri_state_middle_dialog_position">286.0px</dimen>
+    <dimen name="tri_state_middle_dialog_position_l">410.0px</dimen>
+    <dimen name="tri_state_up_dialog_position">145.0px</dimen>
+    <dimen name="tri_state_up_dialog_position_l">410.0px</dimen>
+    <dimen name="tri_state_up_dialog_position_deep">21.0px</dimen>
+    <dimen name="tri_state_up_dialog_position_deep_land">21.0px</dimen>
 
 </resources>

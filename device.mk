@@ -39,9 +39,10 @@ $(call inherit-product-if-exists, packages/apps/prebuilt-apps/prebuilt-apps.mk)
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
 
-# Alert slider
+# OPlusExtras
 PRODUCT_PACKAGES += \
-    alert-slider_daemon
+    OPlusExtras \
+    tri-state-key-calibrate
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
@@ -104,8 +105,7 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     init.mt6893.rc \
-    init.oneplusparts.rc \
-    init.oneplusparts.sh
+    init.oplus_extras.rc
 
 # NFC
 PRODUCT_PACKAGES += \
