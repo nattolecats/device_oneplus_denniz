@@ -35,9 +35,6 @@ $(call inherit-product, vendor/oneplus/denniz/denniz-vendor.mk)
 $(call inherit-product, vendor/mediatek/ims/mtk-ims.mk)
 $(call inherit-product-if-exists, packages/apps/prebuilt-apps/prebuilt-apps.mk)
 
-# OneplusParts
-$(call inherit-product, packages/apps/OneplusParts/parts.mk)
-
 # Dynamic Partition
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
@@ -144,7 +141,7 @@ PRODUCT_PACKAGES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay \
-    $(DEVICE_PATH)/overlay-aosp
+    $(DEVICE_PATH)/overlay-evolution
 
 # MTK IMS Overlays
 PRODUCT_PACKAGES += \
@@ -201,3 +198,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
     WifiOverlay
+
+# Firmware
+TARGET_SHIPS_FIRMWARE := true
