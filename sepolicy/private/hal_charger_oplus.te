@@ -1,0 +1,5 @@
+type hal_charger_oplus, domain;
+type hal_charger_oplus_exec, system_file_type, exec_type, file_type;
+
+allow hal_charger_oplus sysfs_mm:dir search;
+allow hal_charger_oplus sysfs_usb_supply:dir search;
