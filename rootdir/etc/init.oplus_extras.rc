@@ -31,3 +31,20 @@ on property:sys.boot_completed=1
     # Vibration Strength
     chown system system /sys/class/leds/vibrator/gain
     chmod 0666 /sys/class/leds/vibrator/gain
+    
+# Vibration Strength
+on property:persist.vib_strength=""
+    # Vibration Strength is max by default
+    setprop persist.vib_strength 3
+    
+on property:persist.vib_strength=0
+    write /sys/class/leds/vibrator/gain 0x00
+
+on property:persist.vib_strength=1
+    write /sys/class/leds/vibrator/gain 0x16
+
+on property:persist.vib_strength=2
+    write /sys/class/leds/vibrator/gain 0x40
+
+on property:persist.vib_strength=3
+    write /sys/class/leds/vibrator/gain 0x80

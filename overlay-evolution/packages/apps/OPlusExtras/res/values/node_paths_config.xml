@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023 The Evolution X Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <!-- Power Efficient Workqueue sysfs node path -->
+    <string name="node_power_efficient_workqueue_switch" translatable="false">/sys/module/workqueue/parameters/power_efficient</string>
+    
+    <!-- High Brightness sysfs node path -->
+    <string name="node_hbm_switch" translatable="false">/sys/kernel/oplus_display/hbm</string>
+
+    <!-- Max Brightness sysfs node path -->
+    <string name="node_max_brightness_preference" translatable="false">/sys/kernel/oplus_display/max_brightness</string>
+
+    <!-- USB-OTG sysfs node path -->
+    <string name="node_usb_otg_switch" translatable="false">/sys/devices/virtual/oplus_chg/usb/otg_switch</string>
+
+</resources>
