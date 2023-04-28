@@ -201,3 +201,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
     WifiOverlay
+
+# AOD Custom implements
+PRODUCT_PACKAGES += \
+    AODHelper
