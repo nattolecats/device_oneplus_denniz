@@ -204,3 +204,6 @@ TARGET_SHIPS_FIRMWARE := true
 
 # Manifest
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest.xml
+
+# AOD Custom implements
+PRODUCT_PACKAGES += AODHelper
