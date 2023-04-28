@@ -201,3 +201,6 @@ PRODUCT_PACKAGES += \
 
 # Firmware
 TARGET_SHIPS_FIRMWARE := true
+
+# Manifest
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest.xml
