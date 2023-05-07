@@ -39,6 +39,9 @@ $(call inherit-product-if-exists, packages/apps/prebuilt-apps/prebuilt-apps.mk)
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
 
+# OneplusParts
+$(call inherit-product, packages/apps/OneplusParts/parts.mk)
+
 # OPlusExtras
 PRODUCT_PACKAGES += \
     OPlusExtras \

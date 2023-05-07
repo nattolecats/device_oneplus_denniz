@@ -34,17 +34,14 @@ on property:sys.boot_completed=1
     
 # Vibration Strength
 on property:persist.vib_strength=""
-    # Vibration Strength is max by default
-    setprop persist.vib_strength 3
-    
-on property:persist.vib_strength=0
-    write /sys/class/leds/vibrator/gain 0x00
+    # Vibration Strength is min by default
+    setprop persist.vib_strength 0
 
-on property:persist.vib_strength=1
+on property:persist.vib_strength=0
     write /sys/class/leds/vibrator/gain 0x16
 
-on property:persist.vib_strength=2
+on property:persist.vib_strength=1
     write /sys/class/leds/vibrator/gain 0x40
 
-on property:persist.vib_strength=3
+on property:persist.vib_strength=2
     write /sys/class/leds/vibrator/gain 0x80
