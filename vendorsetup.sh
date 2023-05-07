@@ -1,7 +1,27 @@
 #!/bin/sh
 
 # Guard
-if ! history | tail -n 1 | grep -q "evolution_denniz"; then return; fi
+if ! history | tail -n 1 | grep -q "evolution_denniz"; then 
+
+	croot
+	cd build/soong  && git reset --hard
+	
+	croot
+	cd frameworks/av && git reset --hard
+	
+	croot
+	cd frameworks/base && git reset --hard
+	
+	croot
+	cd frameworks/native && git reset --hard
+	
+	croot
+	cd packages/modules/Bluetooth && git reset --hard
+	
+	croot
+	return
+	
+fi
 
 # Give it officiality
 export EVO_BUILD_TYPE=OFFICIAL
