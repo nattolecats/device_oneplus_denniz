@@ -32,7 +32,7 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Call proprietary blob setup
 $(call inherit-product, vendor/oneplus/denniz/denniz-vendor.mk)
-$(call inherit-product, vendor/mediatek/ims/mtk-ims.mk)
+$(call inherit-product, vendor/oneplus/IMS-denniz/mtk-ims.mk)
 $(call inherit-product-if-exists, packages/apps/prebuilt-apps/prebuilt-apps.mk)
 
 # Dynamic Partition
