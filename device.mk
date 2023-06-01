@@ -47,6 +47,10 @@ PRODUCT_PACKAGES += \
     OPlusExtras \
     tri-state-key-calibrate
 
+# CameraGo
+PRODUCT_PACKAGES += \
+    GCamGOPrebuilt-V4
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
