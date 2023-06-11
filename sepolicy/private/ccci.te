@@ -1,0 +1,11 @@
+type ccci_fsd, domain;
+type ccci_mdinit, domain;
+type ccci_rpcd, domain;
+
+allow ccci_fsd proc_version:file read;
+
+allow ccci_mdinit ctl_stop_prop:property_service set;
+allow ccci_mdinit init_service_status_private_prop:file read;
+allow ccci_mdinit sysfs:file read;
+
+allow ccci_rpcd default_prop:file read;

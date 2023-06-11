@@ -23,3 +23,6 @@ allow hal_fingerprint_denniz sysfs:file { open write read getattr };
 allow hal_fingerprint_denniz sysfs_fingerprint_notify:file { open write read getattr };
 
 allow hal_fingerprint_denniz sysfs_dm:file rw_file_perms;
+
+allow hal_fingerprint_denniz sysfs_graphics:dir search;
+allow hal_fingerprint_denniz sysfs_mm:dir search;

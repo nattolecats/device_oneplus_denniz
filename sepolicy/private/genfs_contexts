@@ -2,8 +2,17 @@ genfscon proc  /gpufreq     u:object_r:proc_gpufreq:s0
 genfscon proc  /touchpanel  u:object_r:proc_tp:s0
 genfscon proc /tristatekey  u:object_r:proc_tristatekey:s0
 
-# Vibration
-genfscon sysfs /sys/class/leds/vibrator/vmax         u:object_r:sysfs_vibrator:s0
+# Display
+genfscon sysfs /kernel/oplus_display    u:object_r:sysfs_graphics:s0
+
+# Vibrator
+genfscon sysfs /class/leds/vibrator           u:object_r:sysfs_vibrator:s0
+
+# Workqueue
+genfscon sysfs /module/workqueue              u:object_r:sysfs_workqueue:s0
+
+# Charging
+genfscon sysfs /devices/virtual/oplus_chg     u:object_r:sysfs_usb_supply:s0
 
 # Battery
 genfscon sysfs /devices/platform/battery                     u:object_r:sysfs_batteryinfo:s0

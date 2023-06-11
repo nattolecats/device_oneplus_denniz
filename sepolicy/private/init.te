@@ -14,6 +14,15 @@ allow init sysfs_ged:file { w_file_perms setattr };
 # Allow init to change owner of /proc/cpufreq
 allow init proc_cpufreq:file { w_file_perms setattr };
 
+# Allow init to change owner of /sys/kernel/oplus_display/max_brightness
+allow init sysfs_graphics:file { w_file_perms read open write getattr setattr };
+
+# Allow init to change owner of /sys/module/workqueue
+allow init sysfs_workqueue:file { w_file_perms read open write getattr setattr };
+
+# Allow init to change owner of /sys/devices/virtual/oplus_chg/usb/otg_switch
+allow init sysfs_usb_supply:file { w_file_perms read open write getattr setattr };
+
 # Allow init to set smart charging and USB
 allow init sysfs_battery_supply:file { setattr };
 
@@ -32,3 +41,5 @@ allow init sysfs_fod:file { read open write getattr setattr };
 allow init sysfs_devices_block:file { write };
 allow init sysfs_devices_block:file { open };
 allow init proc_tp:file { setattr };
+
+allow init sysfs_devices_system_cpu:file { w_file_perms read open write getattr setattr };

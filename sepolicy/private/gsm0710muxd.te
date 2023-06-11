@@ -1,0 +1,4 @@
+type gsm0710muxd, domain;
+
+allow gsm0710muxd ctl_stop_prop:property_service set;
+allow gsm0710muxd sysfs_mm:dir search;

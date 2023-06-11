@@ -3,4 +3,7 @@ type hal_fingerprint_oplus_exec, system_file_type, exec_type, file_type;
 
 allow hal_fingerprint_oplus proc_tp:dir search;
 allow hal_fingerprint_oplus proc_tp:file { open write };
-allow hal_fingerprint_oplus default_prop:file { map };
+allow hal_fingerprint_oplus default_prop:file { map read };
+allow hal_fingerprint_oplus default_prop:property_service set;
+allow hal_fingerprint_oplus sysfs_mm:dir search;
+allow hal_fingerprint_oplus vendor_default_prop:property_service set;

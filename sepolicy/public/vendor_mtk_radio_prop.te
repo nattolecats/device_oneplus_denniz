@@ -1,0 +1,4 @@
+type vendor_mtk_radio_prop;
+
+# Allow set property to IMS
+allow radio vendor_mtk_radio_prop:property_service set;
