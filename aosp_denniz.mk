@@ -21,15 +21,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile
 $(call inherit-product, device/oneplus/denniz/device.mk)
 
-# Inherit some common ArrowOS stuff.
-$(call inherit-product, vendor/arrow/config/common.mk)
+# Inherit some common Project Elixir stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
-# ArrowOS Stuff
+# Project Elixir Stuff
 IS_PHONE := true
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_SUPPORTS_QUICK_TAP := true
+CUSTOM_BUILD_TYPE := OFFICIAL
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
+TARGET_INCLUDE_STOCK_ACORE := false
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
+TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_CALL_RECORDING := true
-FORCE_AOSP_DIALER := true
+EXTRA_UDFPS_ANIMATIONS := true
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := aosp_denniz
