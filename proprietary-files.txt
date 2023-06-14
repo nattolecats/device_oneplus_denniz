@@ -63,6 +63,9 @@ lib/libsource.so
 system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so
 system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 
+# RIL
+vendor/lib64/libmtk-ril.so:lib64/libmtk-ril.so
+
 # Misc
 vendor/bin/acpi
 vendor/bin/aee_aedv
@@ -1534,7 +1537,6 @@ vendor/lib64/libMtkOmxCore.so
 vendor/lib64/libmtkperf_client_vendor.so
 vendor/lib64/libmtkproperty.so
 vendor/lib64/libmtkrillog.so
-vendor/lib64/libmtk-ril.so
 vendor/lib64/libmtkrilutils.so
 vendor/lib64/libmtkshifter_vendor.so
 vendor/lib64/libMtkSpeechEnh.so
