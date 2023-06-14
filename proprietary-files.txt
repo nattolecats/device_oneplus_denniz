@@ -1064,7 +1064,6 @@ vendor/etc/smsdbvisitor.xml
 vendor/etc/special_pws_channel.xml
 vendor/etc/spk.wav
 vendor/etc/spn-conf-op09.xml
-vendor/etc/task_profiles.json
 vendor/etc/test_path/common/mixer_paths.xml
 vendor/etc/throttle.sh
 vendor/etc/.tp/.ht120.mtc
@@ -2232,7 +2231,7 @@ vendor/lib/VP9SecureVdecCA.so
 vendor/odm/etc/group
 vendor/odm/etc/NOTICE.xml.gz
 vendor/odm/etc/passwd
-vendor/-odm/etc/vintf/manifest_dsds.xml
-vendor/-odm/etc/vintf/manifest_qsqs.xml
-vendor/-odm/etc/vintf/manifest_ss.xml
-vendor/-odm/etc/vintf/manifest_tsts.xml
+vendor/odm/etc/vintf/manifest_dsds.xml
+vendor/odm/etc/vintf/manifest_qsqs.xml
+vendor/odm/etc/vintf/manifest_ss.xml
+vendor/odm/etc/vintf/manifest_tsts.xml
