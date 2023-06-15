@@ -175,3 +175,6 @@ SELINUX_IGNORE_NEVERALLOWS := true
 
 # UDFPS
 TARGET_SURFACEFLINGER_UDFPS_LIB := //$(DEVICE_PATH):libudfps_extension.denniz
+
+# SELinux Permissive
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
