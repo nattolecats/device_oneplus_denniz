@@ -66,6 +66,54 @@ system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 # RIL
 vendor/lib64/libmtk-ril.so:lib64/libmtk-ril.so
 
+# Graphics
+-vendor/bin/hw/vendor.mediatek.hardware.gpu@1.0-service
+vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
+vendor/etc/init/vendor.mediatek.hardware.gpu@1.0-service.rc
+vendor/etc/vintf/manifest/android.hardware.gpu@1.0-service.xml
+vendor/lib/egl/egl.cfg
+-vendor/lib/egl/libGLES_mali.so
+-vendor/lib/egl/libGLES_meow.so
+-vendor/lib/egl/libMEOW_trace.so
+-vendor/lib/arm.graphics-V1-ndk_platform.so
+-vendor/lib/libOpenCL.so
+-vendor/lib/libdpframework.so
+-vendor/lib/libged.so
+-vendor/lib/libgpu_aux.so
+-vendor/lib/libgpud.so
+-vendor/lib/libgralloc_extra.so
+-vendor/lib/libgralloc_metadata.so
+-vendor/lib/libgralloctypes_mtk.so
+-vendor/lib/libhdrvideo.so
+-vendor/lib/libion_mtk.so
+-vendor/lib/libion_ulit.so
+-vendor/lib/libpixelflinger.so
+-vendor/lib/libscltm.so
+-vendor/lib/vendor.mediatek.hardware.gpu@1.0.so
+-vendor/lib64/egl/libGLES_mali.so
+-vendor/lib64/egl/libGLES_meow.so
+-vendor/lib64/egl/libMEOW_trace.so
+-vendor/lib64/hw/hwcomposer.mt6893.so
+-vendor/lib64/arm.graphics-V1-ndk_platform.so
+-vendor/lib64/libOpenCL.so
+-vendor/lib64/libdpframework.so
+-vendor/lib64/libged.so
+-vendor/lib64/libgpu_aux.so
+-vendor/lib64/libgpud.so
+-vendor/lib64/libgralloc_extra.so
+-vendor/lib64/libgralloc_metadata.so
+-vendor/lib64/libgralloctypes_mtk.so
+-vendor/lib64/libhdrvideo.so
+-vendor/lib64/libion_mtk.so
+-vendor/lib64/libion_ulit.so
+-vendor/lib64/libpixelflinger.so
+-vendor/lib64/libscltm.so
+-vendor/lib64/vendor.mediatek.hardware.gpu@1.0.so
+-vendor/lib/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so
+-vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
+-vendor/lib64/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so
+-vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
+
 # Misc
 vendor/bin/acpi
 vendor/bin/aee_aedv
@@ -180,7 +228,6 @@ vendor/bin/hw/power_native_test_v_1_0
 vendor/bin/hw/power_native_test_v_1_1
 vendor/bin/hw/vendor.mediatek.hardware.aee@1.0-service
 vendor/bin/hw/vendor.mediatek.hardware.dplanner@2.0-service
-vendor/bin/hw/vendor.mediatek.hardware.gpu@1.0-service
 vendor/bin/hw/vendor.mediatek.hardware.keyinstall@1.0-service
 vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
 vendor/bin/hw/vendor.mediatek.hardware.mmagent@1.0-service
@@ -529,7 +576,6 @@ vendor/etc/init/android.hardware.drm@1.3-service.clearkey.rc
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc
 vendor/etc/init/android.hardware.gnss@2.1-service-mediatek.rc
-vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
 vendor/etc/init/android.hardware.graphics.composer@2.2-service.rc
 vendor/etc/init/android.hardware.health@2.1-service.rc
 vendor/etc/init/android.hardware.keymaster@4.0-service.trustonic.rc
@@ -601,7 +647,6 @@ vendor/etc/init/trustonic.rc
 vendor/etc/init/vendor_flash_recovery.rc
 vendor/etc/init/vendor.mediatek.hardware.aee@1.0-service.rc
 vendor/etc/init/vendor.mediatek.hardware.dplanner@2.0-service.rc
-vendor/etc/init/vendor.mediatek.hardware.gpu@1.0-service.rc
 vendor/etc/init/vendor.mediatek.hardware.keyinstall@1.0-service.rc
 vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
 vendor/etc/init/vendor.mediatek.hardware.mmagent@1.0-service.rc
@@ -1071,7 +1116,6 @@ vendor/etc/usb_audio_accessory_only_policy_configuration.xml
 vendor/etc/usb_audio_policy_configuration.xml
 -vendor/etc/vintf/compatibility_matrix.xml
 -vendor/etc/vintf/manifest/android.hardware.cas@1.2-service.xml
--vendor/etc/vintf/manifest/android.hardware.gpu@1.0-service.xml
 -vendor/etc/vintf/manifest/android.hardware.health@2.1.xml
 -vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-mtk-mdla-dsp-gpu.xml
 -vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml
@@ -1166,13 +1210,9 @@ vendor/lib64/APUWareApusysServer.so
 vendor/lib64/APUWareHmpServer.so
 vendor/lib64/APUWareUtilsServer.so
 vendor/lib64/APUWareXrpServer.so
-vendor/lib64/arm.graphics-V1-ndk_platform.so
 vendor/lib64/AV1SecureVdecCA.so
 vendor/lib64/AVCSecureVdecCA.so
 vendor/lib64/AVCSecureVencCA.so
-vendor/lib64/egl/libGLES_mali.so
-vendor/lib64/egl/libGLES_meow.so
-vendor/lib64/egl/libMEOW_trace.so
 vendor/lib64/gc02m1b_mipi_mono20817_IdxMgr.so
 vendor/lib64/gc02m1b_mipi_mono_IdxMgr.so
 vendor/lib64/HEVCSecureVdecCA.so
@@ -1183,8 +1223,6 @@ vendor/lib64/hw/android.hardware.bluetooth.audio@2.0-impl.so
 vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so
-vendor/lib64/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so
-vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
 vendor/lib64/hw/android.hardware.health@2.0-impl-2.1.so
 vendor/lib64/hw/android.hardware.memtrack@1.0-impl.so
 vendor/lib64/hw/android.hardware.soundtrigger@2.3-impl.so
@@ -1203,7 +1241,6 @@ vendor/lib64/hw/gatekeeper.mt6893.so
 vendor/lib64/hw/gatekeeper.oplus6893.so
 vendor/lib64/hw/gps.default.so
 vendor/lib64/hw/gralloc.default.so
-vendor/lib64/hw/hwcomposer.mt6893.so
 vendor/lib64/hw/kmsetkey.default.so
 vendor/lib64/hw/kmsetkey.trustonic.so
 vendor/lib64/hw/libMcGatekeeper.so
@@ -1375,7 +1412,6 @@ vendor/lib64/libcvsd_mtk.so
 vendor/lib64/libdip_drv.so
 vendor/lib64/libdip_imem.so
 vendor/lib64/libdip_postproc.so
-vendor/lib64/libdpframework.so
 vendor/lib64/libdrm.so
 vendor/lib64/libeffecthal.base.so
 vendor/lib64/libeffectsconfig.so
@@ -1392,16 +1428,9 @@ vendor/lib64/libfeature.vsdof.hal.so
 vendor/lib64/libfft_vendor.so
 vendor/lib64/libfile_op.so
 vendor/lib64/libforkexecwrap.so
-vendor/lib64/libged.so
-vendor/lib64/libgpu_aux.so
-vendor/lib64/libgpud.so
-vendor/lib64/libgralloc_extra.so
-vendor/lib64/libgralloc_metadata.so
-vendor/lib64/libgralloctypes_mtk.so
 vendor/lib64/libgwsdv2-ril.so
 vendor/lib64/libgz_gp_client.so
 vendor/lib64/libgz_uree.so
-vendor/lib64/libhdrvideo.so
 vendor/lib64/libhevce_sb.ca7.android.so
 vendor/lib64/libhfmanager.so
 vendor/lib64/libhfmanagerwrapper.so
@@ -1418,8 +1447,6 @@ vendor/lib64/libimageio_plat_drv.so
 vendor/lib64/libimageio_plat_pipe.so
 vendor/lib64/libimageio.so
 vendor/lib64/libimgsensorca.so
-vendor/lib64/libion_mtk.so
-vendor/lib64/libion_ulit.so
 vendor/lib64/libipsec_ims_shr.so
 vendor/lib64/libispcameraca.so
 vendor/lib64/libjpeg-alpha-oal_vendor.so
@@ -1558,12 +1585,10 @@ vendor/lib64/libnxp_extamp_intf.so
 vendor/lib64/libnxprecord.so
 vendor/lib64/libnxpsmartpaparser.so
 vendor/lib64/libnxpspeech.so
-vendor/lib64/libOpenCL.so
 vendor/lib64/liboplus_audio_config.so
 vendor/lib64/liboplusbtnvutils.so
 vendor/lib64/liboplus_mtkcam_configutils.so
 vendor/lib64/libperfctl_vendor.so
-vendor/lib64/libpixelflinger.so
 vendor/lib64/libpowerhal.so
 vendor/lib64/libpowerhalwrap_vendor.so
 vendor/lib64/libpq_cust_base.so
@@ -1577,7 +1602,6 @@ vendor/lib64/librgbwlightsensor.so
 vendor/lib64/librilfusion.so
 vendor/lib64/libril.so
 vendor/lib64/librilutils.so
-vendor/lib64/libscltm.so
 vendor/lib64/libsensor_custom.so
 vendor/lib64/libsensorndkbridge.so
 vendor/lib64/libSensorSave.so
@@ -1662,7 +1686,6 @@ vendor/lib64/vendor.mediatek.hardware.engineermode@1.0.so
 vendor/lib64/vendor.mediatek.hardware.engineermode@1.1.so
 vendor/lib64/vendor.mediatek.hardware.engineermode@1.2.so
 vendor/lib64/vendor.mediatek.hardware.engineermode@1.3.so
-vendor/lib64/vendor.mediatek.hardware.gpu@1.0.so
 vendor/lib64/vendor.mediatek.hardware.keyinstall@1.0.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
@@ -1715,14 +1738,9 @@ vendor/lib64/vendor.trustonic.tee.tui@1.0.so
 vendor/lib64/VP9SecureVdecCA.so
 vendor/lib/android.hardware.audio.common@6.0-util.so
 vendor/lib/android.hardware.audio.common-util.so
-vendor/lib/arm.graphics-V1-ndk_platform.so
 vendor/lib/AV1SecureVdecCA.so
 vendor/lib/AVCSecureVdecCA.so
 vendor/lib/AVCSecureVencCA.so
-vendor/lib/egl/egl.cfg
-vendor/lib/egl/libGLES_mali.so
-vendor/lib/egl/libGLES_meow.so
-vendor/lib/egl/libMEOW_trace.so
 vendor/lib/gc02m1b_mipi_mono20817_IdxMgr.so
 vendor/lib/gc02m1b_mipi_mono_IdxMgr.so
 vendor/lib/HEVCSecureVdecCA.so
@@ -1731,8 +1749,6 @@ vendor/lib/hw/android.hardware.audio.effect@6.0-impl.so
 vendor/lib/hw/android.hardware.bluetooth@1.0-impl-mediatek.so
 vendor/lib/hw/android.hardware.bluetooth.audio@2.0-impl.so
 vendor/lib/hw/android.hardware.gatekeeper@1.0-impl.so
-vendor/lib/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so
-vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
 vendor/lib/hw/android.hardware.health@2.0-impl-2.1.so
 vendor/lib/hw/android.hardware.memtrack@1.0-impl.so
 vendor/lib/hw/android.hardware.soundtrigger@2.3-impl.so
@@ -1906,7 +1922,6 @@ vendor/lib/libcvsd_mtk.so
 vendor/lib/libdip_drv.so
 vendor/lib/libdip_imem.so
 vendor/lib/libdip_postproc.so
-vendor/lib/libdpframework.so
 vendor/lib/libdrm.so
 vendor/lib/libDR.so
 vendor/lib/libeffecthal.base.so
@@ -1923,12 +1938,6 @@ vendor/lib/libfeature.stereo.provider.so
 vendor/lib/libfeature.vsdof.hal.so
 vendor/lib/libfgauge_gm30.so
 vendor/lib/libfile_op.so
-vendor/lib/libged.so
-vendor/lib/libgpu_aux.so
-vendor/lib/libgpud.so
-vendor/lib/libgralloc_extra.so
-vendor/lib/libgralloc_metadata.so
-vendor/lib/libgralloctypes_mtk.so
 vendor/lib/libgz_gp_client.so
 vendor/lib/libgz_uree.so
 vendor/lib/libh264dec_customize.so
@@ -1936,7 +1945,6 @@ vendor/lib/libh264dec_sa.ca7.so
 vendor/lib/libh264dec_sd.ca7.so
 vendor/lib/libh264dec_se.ca7.so
 vendor/lib/libh264enc_sa.ca7.so
-vendor/lib/libhdrvideo.so
 vendor/lib/libHEVCdec_sa.ca7.android.so
 vendor/lib/libhevce_sb.ca7.android.so
 vendor/lib/libhfmanager.so
@@ -1949,8 +1957,6 @@ vendor/lib/libimageio_plat_drv.so
 vendor/lib/libimageio_plat_pipe.so
 vendor/lib/libimageio.so
 vendor/lib/libimgsensorca.so
-vendor/lib/libion_mtk.so
-vendor/lib/libion_ulit.so
 vendor/lib/libipsec_ims_shr.so
 vendor/lib/libispcameraca.so
 vendor/lib/libjpeg-alpha-oal_vendor.so
@@ -2059,13 +2065,11 @@ vendor/lib/libnxp_extamp_intf.so
 vendor/lib/libnxprecord.so
 vendor/lib/libnxpsmartpaparser.so
 vendor/lib/libnxpspeech.so
-vendor/lib/libOpenCL.so
 vendor/lib/liboplus_audio_config.so
 vendor/lib/liboplusbtnvutils.so
 vendor/lib/liboplus_mtkcam_configutils.so
 vendor/lib/libopus.so
 vendor/lib/libperfctl_vendor.so
-vendor/lib/libpixelflinger.so
 vendor/lib/libpowerhal.so
 vendor/lib/libpowerhalwrap_vendor.so
 vendor/lib/libpq_cust_base.so
@@ -2077,7 +2081,6 @@ vendor/lib/librgbwlightsensor.so
 vendor/lib/libril.so
 vendor/lib/librilutils.so
 vendor/lib/librpc.so
-vendor/lib/libscltm.so
 vendor/lib/libsensorndkbridge.so
 vendor/lib/libSensorSave.so
 vendor/lib/libSonyIMX230PdafLibrary.so
@@ -2192,7 +2195,6 @@ vendor/lib/vendor.mediatek.hardware.camera.bgservice@1.1.so
 vendor/lib/vendor.mediatek.hardware.camera.camdump@1.0.so
 vendor/lib/vendor.mediatek.hardware.camera.ccap@1.0.so
 vendor/lib/vendor.mediatek.hardware.camera.isphal@1.0.so
-vendor/lib/vendor.mediatek.hardware.gpu@1.0.so
 vendor/lib/vendor.mediatek.hardware.keyinstall@1.0.so
 vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.0.so
 vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.1.so
