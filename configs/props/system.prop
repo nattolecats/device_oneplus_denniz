@@ -52,6 +52,9 @@ debug.sf.latch_unsignaled=0
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.enable_transaction_tracing=false
 
+# Brightness Curve
+persist.sys.brightness.low.gamma=true
+
 # WFD
 ro.vendor.wfd.dummy.enable=0
 
