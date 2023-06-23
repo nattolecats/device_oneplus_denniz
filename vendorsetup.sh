@@ -16,7 +16,7 @@ source vendor/oneplus/denniz-patches/functions.sh
 discardPatches
 
 # Guard
-if ! history | tail -n 1 | grep -q "evolution_denniz"; then return; fi
+if ! history | tail -n 1 | grep -q "denniz"; then return; fi
 
 # Give it officiality
 export EVO_BUILD_TYPE=OFFICIAL
