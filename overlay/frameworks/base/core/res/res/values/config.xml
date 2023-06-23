@@ -248,7 +248,7 @@
 
     <!-- Minimum screen brightness setting allowed by power manager.
          The user is forbidden from setting the brightness below this level. -->
-    <item name="config_screenBrightnessSettingMinimumFloat" format="float" type="dimen">0.0</item>
+    <item name="config_screenBrightnessSettingMinimumFloat" format="float" type="dimen">0.15</item>
 
     <!-- Maximum screen brightness allowed by the power manager.
          The user is forbidden from setting the brightness above this level -->
@@ -256,7 +256,7 @@
 
     <!-- Default screen brightness setting
          Must be in the range specified by minimum and maximum. -->
-    <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.4</item>
+    <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.1</item>
 
     <!-- Allow automatic adjusting of the screen brightness while dozing in low power state. -->
     <bool name="config_allowAutoBrightnessWhileDozing">false</bool>
@@ -264,15 +264,15 @@
     <!-- Screen brightness used to dim the screen while dozing in a very low power state.
          May be less than the minimum allowed brightness setting
          that can be set by the user. -->
-    <integer name="config_screenBrightnessDoze">5</integer>
+    <integer name="config_screenBrightnessDoze">3</integer>
 
     <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
          for debouncing the light sensor.  Different constants are used to debounce the light sensor
          when adapting to brighter or darker environments.  This parameter controls how quickly
          brightness changes occur in response to an observed change in light level that exceeds the
          hysteresis threshold. -->
-    <integer name="config_autoBrightnessBrighteningLightDebounce">4000</integer>
-    <integer name="config_autoBrightnessDarkeningLightDebounce">8000</integer>
+    <integer name="config_autoBrightnessBrighteningLightDebounce">2000</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">2000</integer>
 
     <!-- Initial light sensor event rate in milliseconds for automatic brightness control. This is
          used for obtaining the first light sample when the device stops dozing.
@@ -335,21 +335,21 @@
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
         <item>8</item>
-        <item>64</item>
+        <item>16</item>
+        <item>32</item>
+        <item>58</item>
+        <item>82</item>
         <item>98</item>
-        <item>104</item>
         <item>110</item>
-        <item>116</item>
-        <item>122</item>
-        <item>128</item>
+        <item>125</item>
         <item>134</item>
         <item>182</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
+        <item>198</item>
+        <item>210</item>
+        <item>225</item>
+        <item>238</item>
+        <item>246</item>
+        <item>250</item>
         <item>255</item>
         <item>255</item>
     </integer-array>
