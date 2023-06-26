@@ -190,7 +190,8 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(DEVICE_PATH)
+    $(DEVICE_PATH) \
+    hardware/mediatek
 
 # System prop
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
@@ -202,6 +203,10 @@ PRODUCT_PACKAGES += \
 # Touch
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.denniz
+
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-service.mediatek
 
 # Vendor overlay
 PRODUCT_COPY_FILES += \
