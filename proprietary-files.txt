@@ -914,6 +914,9 @@ vendor/etc/permissions/android.software.vulkan.deqp.level.xml
 vendor/etc/permissions/com.mediatek.hardware.vow_dsp.xml
 vendor/etc/permissions/com.mediatek.hardware.vow.xml
 vendor/etc/permissions/handheld_core_hardware.xml
+vendor/etc/power_app_cfg.xml
+vendor/etc/powercontable.xml
+vendor/etc/powerscntbl.xml
 vendor/etc/public.libraries.txt
 vendor/etc/r_submix_audio_policy_configuration.xml
 vendor/etc/seccomp_policy/mediacodec.policy
