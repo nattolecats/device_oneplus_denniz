@@ -13,9 +13,6 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Color of the UDFPS view -->
-    <color name="config_udfpsColor">#00ffffff</color>
-
     <!-- The radius of the enrollment progress bar, in dp -->
     <integer name="config_udfpsEnrollProgressBar" translatable="false">101</integer>
     

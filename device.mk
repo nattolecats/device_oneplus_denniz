@@ -42,14 +42,9 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 # OneplusParts
 $(call inherit-product, packages/apps/OneplusParts/parts.mk)
 
-# OPlusExtras
+# Alert slider
 PRODUCT_PACKAGES += \
-    OPlusExtras \
-    tri-state-key-calibrate
-
-# CameraGo
-PRODUCT_PACKAGES += \
-    GCamGOPrebuilt-V4
+    alert-slider_daemon
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
@@ -117,7 +112,6 @@ PRODUCT_PACKAGES += \
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
-    com.gsma.services.nfc  \
     NfcNci \
     SecureElement \
     Tag
@@ -148,7 +142,7 @@ PRODUCT_PACKAGES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay \
-    $(DEVICE_PATH)/overlay-evolution
+    $(DEVICE_PATH)/overlay-lineage
 
 # MTK IMS Overlays
 PRODUCT_PACKAGES += \
@@ -206,10 +200,6 @@ PRODUCT_PACKAGES += \
 # Vendor overlay
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(DEVICE_PATH)/vendor_overlay/,$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/30/)
-
-# Udfps
-PRODUCT_PACKAGES += \
-    UdfpsResources
 
 # Wi-Fi
 PRODUCT_PACKAGES += \

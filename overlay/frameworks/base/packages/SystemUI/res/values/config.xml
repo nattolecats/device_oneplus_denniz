@@ -27,4 +27,7 @@
     <item name="proximity_sensor_threshold" translatable="false" format="float"
           type="dimen">4.99</item>
     
+    <!-- The radius of the enrollment progress bar, in dp -->
+    <integer name="config_udfpsEnrollProgressBar" translatable="false">101</integer>
+    
 </resources>
