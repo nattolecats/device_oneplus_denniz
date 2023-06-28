@@ -72,6 +72,9 @@ void Light::handleBacklight(const LightState& state) {
     // Apply extreme brightness when reached to slider max.
     if (sentBrightness >= 255) brightness = maxBrightnessExtreme;
 
+    // Decrase more 20% brightness when brightness are low.
+    if (brightness <= 180) brightness *= 0.8;
+
     LOG(DEBUG) << "Writing backlight brightness " << brightness
                << " (orig " << sentBrightness << ")";
 
