@@ -50,7 +50,24 @@ PRODUCT_PACKAGES += \
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
+# Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio@5.0 \
+    android.hardware.audio.common@5.0-util \
+    android.hardware.audio.effect@5.0 \
+    android.hardware.soundtrigger@2.2 \
+    audio.bluetooth.default \
+    audio.r_submix.default \
+    audio.usb.default \
+    audio_policy.stub \
+    libaudiofoundation \
+    libtinycompress
+
 # Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth.a2dp@1.0 \
+    android.hardware.bluetooth.audio@2.0-impl
+
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/oneplus/denniz/bluetooth/include
 
 # Bluetooth Audio (System-side HAL, sysbta)
@@ -96,6 +113,8 @@ PRODUCT_COPY_FILES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.manager@1.0 \
     libhidltransport \
     libhardware \
     libhwbinder
@@ -137,7 +156,8 @@ PRODUCT_COPY_FILES += \
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.denniz \
-    android.hardware.sensors@2.0-service-multihal.denniz
+    android.hardware.sensors@2.0-service-multihal.denniz \
+    android.frameworks.sensorservice@1.0
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
