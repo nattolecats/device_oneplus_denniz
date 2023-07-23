@@ -24,9 +24,6 @@
 #include <android-base/stringprintf.h>
 #include <fstream>
 
-#define NODE_BRIGHTNESS "/sys/class/leds/lcd-backlight/brightness"
-#define NODE_MAX_BRIGHTNESS "/sys/class/leds/lcd-backlight/max_brightness"
-
 namespace android {
 namespace hardware {
 namespace light {
@@ -63,22 +60,15 @@ Light::Light() {
 }
 
 void Light::handleBacklight(const LightState& state) {
-    int maxBrightnessExtreme = get(NODE_MAX_BRIGHTNESS, -1); //4095
-    int maxBrightness = maxBrightnessExtreme / 4; //1023
-
+    int maxBrightness = get("/sys/class/leds/lcd-backlight/max_brightness", -1);
+    if (maxBrightness < 0) {
+        maxBrightness = 255;
+    }
     int sentBrightness = rgbToBrightness(state);
     int brightness = sentBrightness * maxBrightness / 255;
-
-    // Apply extreme brightness when reached to slider max.
-    if (sentBrightness >= 255) brightness = maxBrightnessExtreme;
-
-    // Decrase more 20% brightness when brightness are low.
-    if (brightness <= 180) brightness *= 0.8;
-
     LOG(DEBUG) << "Writing backlight brightness " << brightness
                << " (orig " << sentBrightness << ")";
-
-    set(NODE_BRIGHTNESS, brightness);
+    set("/sys/class/leds/lcd-backlight/brightness", brightness);
 }
 
 Return<Status> Light::setLight(Type type, const LightState& state) {
