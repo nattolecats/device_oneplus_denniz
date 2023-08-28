@@ -23,6 +23,9 @@ system_ext/lib64/vendor.mediatek.hardware.apuware.xrp@1.0.so
 lib64/libaptX_encoder.so
 lib64/libaptXHD_encoder.so
 
+# RIL
+lib64/libmtk-ril.so|17039cc8e865ef2ad85678317163048f78868328
+
 # IMS
 bin/vtservice
 etc/init/init.vtservice.rc
