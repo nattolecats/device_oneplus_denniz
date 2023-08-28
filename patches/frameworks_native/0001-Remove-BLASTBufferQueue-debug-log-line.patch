@@ -1,0 +1,30 @@
+From 052737b157a493c484282d11ac99b9a62683259f Mon Sep 17 00:00:00 2001
+From: Tommy Webb <tommy@calyxinstitute.org>
+Date: Tue, 27 Dec 2022 13:15:49 -0500
+Subject: [PATCH 1/1] Remove BLASTBufferQueue debug log line
+
+This message is being spammed enough to prevent the main log buffer
+from being as useful for troubleshooting. In a recent check on raven,
+3K/10K lines in main contained:
+`BLASTBufferQueue[...]faking releaseBufferCallback`
+
+Change-Id: I226e0043da8ccdb18274ec3294f69077ce95ad6f
+---
+ libs/gui/BLASTBufferQueue.cpp | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/libs/gui/BLASTBufferQueue.cpp b/libs/gui/BLASTBufferQueue.cpp
+index a51bbb1553..2467434a74 100644
+--- a/libs/gui/BLASTBufferQueue.cpp
++++ b/libs/gui/BLASTBufferQueue.cpp
+@@ -357,7 +357,6 @@ void BLASTBufferQueue::transactionCallback(nsecs_t /*latchTime*/, const sp<Fence
+                     }
+                 }
+                 for (const auto& staleRelease : staleReleases) {
+-                    BQA_LOGE("Faking releaseBufferCallback from transactionCompleteCallback");
+                     BBQ_TRACE("FakeReleaseCallback");
+                     releaseBufferCallbackLocked(staleRelease,
+                         stat.previousReleaseFence ? stat.previousReleaseFence : Fence::NO_FENCE,
+-- 
+2.34.1
+

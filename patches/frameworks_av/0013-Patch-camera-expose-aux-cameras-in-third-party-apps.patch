@@ -1,0 +1,32 @@
+From 7e5ac589c2c2f1e818f7020b5018830fe166552f Mon Sep 17 00:00:00 2001
+From: Pierre-Hugues Husson <phh@phh.me>
+Date: Sun, 26 Feb 2023 02:12:11 +0100
+Subject: [PATCH] camera: Expose aux cameras in third party apps
+
+Change-Id: Ic8bbb695b65be4c0cd03d15b5c1260820591da4b
+---
+ .../libcameraservice/common/CameraProviderManager.cpp     | 8 --------
+ 1 file changed, 8 deletions(-)
+
+diff --git a/services/camera/libcameraservice/common/CameraProviderManager.cpp b/services/camera/libcameraservice/common/CameraProviderManager.cpp
+index 6ef16b3ca8..abb782a5a1 100644
+--- a/services/camera/libcameraservice/common/CameraProviderManager.cpp
++++ b/services/camera/libcameraservice/common/CameraProviderManager.cpp
+@@ -964,14 +964,6 @@ SystemCameraKind CameraProviderManager::ProviderInfo::DeviceInfo3::getSystemCame
+         return SystemCameraKind::HIDDEN_SECURE_CAMERA;
+     }
+ 
+-    // Go through the capabilities and check if it has
+-    // ANDROID_REQUEST_AVAILABLE_CAPABILITIES_SYSTEM_CAMERA
+-    for (size_t i = 0; i < entryCap.count; ++i) {
+-        uint8_t capability = entryCap.data.u8[i];
+-        if (capability == ANDROID_REQUEST_AVAILABLE_CAPABILITIES_SYSTEM_CAMERA) {
+-            return SystemCameraKind::SYSTEM_ONLY_CAMERA;
+-        }
+-    }
+     return SystemCameraKind::PUBLIC;
+ }
+ 
+-- 
+2.34.1
+

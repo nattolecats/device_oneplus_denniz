@@ -1,0 +1,47 @@
+From c39f72103e9d566892368b59b537ef4b16f0cd93 Mon Sep 17 00:00:00 2001
+From: spezi77 <spezi7713@gmx.net>
+Date: Tue, 24 Aug 2021 17:39:13 +0200
+Subject: [PATCH 1/1] PowerUI: Mute logcat spam
+
+D PowerUI : can't show warning due to - plugged: true status unknown: false
+
+I'm not 100% sure, but I believe that this was the reason for a SystemUI hang,
+which was responsible for the fact that the screen could not be switched on
+for several seconds and just remained black.
+
+Change-Id: I6ba156b35da4fe5725e5c69119967096e3a586cd
+---
+ .../src/com/android/systemui/power/PowerUI.java        | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+
+diff --git a/packages/SystemUI/src/com/android/systemui/power/PowerUI.java b/packages/SystemUI/src/com/android/systemui/power/PowerUI.java
+index 67dae9e7a0ea..4a1f63e0fede 100644
+--- a/packages/SystemUI/src/com/android/systemui/power/PowerUI.java
++++ b/packages/SystemUI/src/com/android/systemui/power/PowerUI.java
+@@ -62,7 +62,7 @@ import dagger.Lazy;
+ public class PowerUI extends CoreStartable implements CommandQueue.Callbacks {
+ 
+     static final String TAG = "PowerUI";
+-    static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
++    static final boolean DEBUG = false;
+     private static final long TEMPERATURE_INTERVAL = 30 * DateUtils.SECOND_IN_MILLIS;
+     private static final long TEMPERATURE_LOGGING_INTERVAL = DateUtils.HOUR_IN_MILLIS;
+     private static final int MAX_RECENT_TEMPS = 125; // TEMPERATURE_LOGGING_INTERVAL plus a buffer
+@@ -425,9 +425,11 @@ public class PowerUI extends CoreStartable implements CommandQueue.Callbacks {
+     boolean shouldShowHybridWarning(BatteryStateSnapshot snapshot) {
+         if (snapshot.getPlugged()
+                 || snapshot.getBatteryStatus() == BatteryManager.BATTERY_STATUS_UNKNOWN) {
+-            Slog.d(TAG, "can't show warning due to - plugged: " + snapshot.getPlugged()
+-                    + " status unknown: "
+-                    + (snapshot.getBatteryStatus() == BatteryManager.BATTERY_STATUS_UNKNOWN));
++            if (DEBUG) {
++                Slog.d(TAG, "can't show warning due to - plugged: " + snapshot.getPlugged()
++                        + " status unknown: "
++                        + (snapshot.getBatteryStatus() == BatteryManager.BATTERY_STATUS_UNKNOWN));
++            }
+             return false;
+         }
+ 
+-- 
+2.34.1
+
