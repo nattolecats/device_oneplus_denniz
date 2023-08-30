@@ -146,6 +146,10 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay \
     $(DEVICE_PATH)/overlay-aosp
 
+# RRO Overlays
+PRODUCT_PACKAGES += \
+    FrameworksResOverlay
+
 # MTK IMS Overlays
 PRODUCT_PACKAGES += \
     mtk-ims \
