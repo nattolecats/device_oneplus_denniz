@@ -1,0 +1,25 @@
+From 364801972774d61f1e6e19b6eb19750568aee58e Mon Sep 17 00:00:00 2001
+From: lahaina <nattolecats@gmail.com>
+Date: Sun, 3 Sep 2023 22:56:20 +0900
+Subject: [PATCH] configs: packages: Nuke stats
+
+Change-Id: I7984fc600450a89f50a5367452dacafc04bea2f1
+---
+ config/packages.mk | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/config/packages.mk b/config/packages.mk
+index cdc6b59..efa26e0 100644
+--- a/config/packages.mk
++++ b/config/packages.mk
+@@ -26,7 +26,6 @@ PRODUCT_PACKAGES += \
+     Seedvault \
+     SimpleGallery \
+     Stk \
+-    stats \
+     ThemePicker
+ 
+ # SystemUI plugins
+-- 
+2.25.1
+
