@@ -30,6 +30,7 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_SUPPORTS_CALL_RECORDING := true
 FORCE_AOSP_DIALER := true
+ARROW_GAPPS := true
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := arrow_denniz
