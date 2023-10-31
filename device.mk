@@ -219,6 +219,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nexus.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/nexus.xml
 
+# GCamGo
+PRODUCT_PACKAGES += \
+    GCamGOPrebuilt-V3_8
+
 # For debugging
 ifneq (,$(filter userdebug eng,$(TARGET_BUILD_VARIANT)))
 PRODUCT_PACKAGES += MatLog
