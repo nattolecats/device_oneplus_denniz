@@ -1,7 +1,7 @@
-From 0840553d8daab31451afc62b8b13bef45e30d0c4 Mon Sep 17 00:00:00 2001
+From 78d9273cc66e2e8760ffd278b16feeb92b311adf Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Mon, 5 Aug 2019 18:09:50 +0200
-Subject: [PATCH 02/12] Fix BT in-call on CAF devices
+Subject: [PATCH 02/21] Fix BT in-call on CAF devices
 
 See https://github.com/phhusson/treble_experimentations/issues/374
 
@@ -11,16 +11,15 @@ from primary output and telephony to BT SCO.
 Add it if we detect telephony and bt sco, but no such route.
 
 Change-Id: Ifea0f88276ec9a0811f3cb1973c4b06f2c82077b
-Signed-off-by: Nishant Kumar <www.rajsonu13@gmail.com>
 ---
  .../managerdefinitions/src/Serializer.cpp     | 93 +++++++++++++++++++
  1 file changed, 93 insertions(+)
 
 diff --git a/services/audiopolicy/common/managerdefinitions/src/Serializer.cpp b/services/audiopolicy/common/managerdefinitions/src/Serializer.cpp
-index 6630d06f6d..456c5a935c 100644
+index 3d5c1d2e42..5ca409cfe7 100644
 --- a/services/audiopolicy/common/managerdefinitions/src/Serializer.cpp
 +++ b/services/audiopolicy/common/managerdefinitions/src/Serializer.cpp
-@@ -662,6 +662,98 @@ std::variant<status_t, RouteTraits::Element> PolicySerializer::deserialize<Route
+@@ -663,6 +663,98 @@ std::variant<status_t, RouteTraits::Element> PolicySerializer::deserialize<Route
      return route;
  }
  
@@ -119,7 +118,7 @@ index 6630d06f6d..456c5a935c 100644
  template<>
  std::variant<status_t, ModuleTraits::Element> PolicySerializer::deserialize<ModuleTraits>(
          const xmlNode *cur, ModuleTraits::PtrSerializingCtx ctx)
-@@ -729,6 +821,7 @@ std::variant<status_t, ModuleTraits::Element> PolicySerializer::deserialize<Modu
+@@ -710,6 +802,7 @@ std::variant<status_t, ModuleTraits::Element> PolicySerializer::deserialize<Modu
      if (status != NO_ERROR) {
          return status;
      }
