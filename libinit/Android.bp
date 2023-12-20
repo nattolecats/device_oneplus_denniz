@@ -9,6 +9,7 @@ cc_library_static {
     srcs: [
         "libinit_dalvik_heap.cpp",
         "libinit_variant.cpp",
+        "libinit_bt.cpp",
         "libinit_utils.cpp",
     ],
     whole_static_libs: ["libbase"],

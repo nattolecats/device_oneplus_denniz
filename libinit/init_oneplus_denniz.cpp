@@ -6,6 +6,7 @@
 
 #include <libinit_dalvik_heap.h>
 #include <libinit_variant.h>
+#include <libinit_bt.h>
 
 #include "vendor_init.h"
 
@@ -35,4 +36,5 @@ static const std::vector<variant_info_t> variants = {
 void vendor_load_properties() {
     search_variant(variants);
     set_dalvik_heap();
+    set_bt_props();
 }
