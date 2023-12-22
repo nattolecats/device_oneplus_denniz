@@ -21,12 +21,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile
 $(call inherit-product, device/oneplus/denniz/device.mk)
 
-# Inherit some common Evolution X stuff.
-$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
+# Inherit some common Rising stuff.
+$(call inherit-product, vendor/rising/config/rising.mk)
 
-# Evolution X Stuff
-TARGET_BOOT_ANIMATION_RES := 1080
-EXTRA_UDFPS_ANIMATIONS := true
+# Rising Stuff
+RISING_MAINTAINER := lahaina
+RISING_CHIPSET := Dimensity 1200-AI
+TARGET_ENABLE_BLUR := false
+INLINE_KERNEL_BUILDING := true
+WITH_GMS := true
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := evolution_denniz

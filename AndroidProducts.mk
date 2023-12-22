@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/evolution_denniz.mk
+    $(LOCAL_DIR)/rising_denniz.mk
 
 COMMON_LUNCH_CHOICES := \
-    evolution_denniz-eng \
-    evolution_denniz-userdebug \
-    evolution_denniz-user
+    rising_denniz-eng \
+    rising_denniz-userdebug \
+    rising_denniz-user
